@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E1N-sh-0bB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sporting View Controller-->
+        <scene sceneID="NFB-ba-G2l">
+            <objects>
+                <viewController id="E1N-sh-0bB" customClass="SGSportingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vQA-zI-mcI"/>
+                        <viewControllerLayoutGuide type="bottom" id="xdK-3P-Vjz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V1z-q0-zf1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwE-23-D2e">
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="chengeSportState:" destination="E1N-sh-0bB" eventType="touchUpInside" id="jl1-pr-kPM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7P-jR-54R">
+                                <state key="normal" title="继续"/>
+                                <connections>
+                                    <action selector="chengeSportState:" destination="E1N-sh-0bB" eventType="touchUpInside" id="MYx-Ys-0ad"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-r2-bac">
+                                <state key="normal" title="结束"/>
+                                <connections>
+                                    <action selector="chengeSportState:" destination="E1N-sh-0bB" eventType="touchUpInside" id="02c-fd-bpI"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQr-oB-Ohj">
+                                <connections>
+                                    <segue destination="quV-fd-VQs" kind="embed" id="Cpm-KN-3N3"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ztp-r2-bac" firstAttribute="centerY" secondItem="YwE-23-D2e" secondAttribute="centerY" id="68S-Gw-aHB"/>
+                            <constraint firstItem="Ztp-r2-bac" firstAttribute="centerX" secondItem="V1z-q0-zf1" secondAttribute="centerX" multiplier="1.5" id="9nJ-0G-FhQ"/>
+                            <constraint firstItem="YwE-23-D2e" firstAttribute="centerY" secondItem="V1z-q0-zf1" secondAttribute="centerY" multiplier="1.79" id="H6G-9k-70m"/>
+                            <constraint firstItem="R7P-jR-54R" firstAttribute="centerX" secondItem="V1z-q0-zf1" secondAttribute="centerX" multiplier="0.5" id="LRQ-qa-Oo8"/>
+                            <constraint firstItem="R7P-jR-54R" firstAttribute="centerY" secondItem="YwE-23-D2e" secondAttribute="centerY" id="Zsy-4B-QKD"/>
+                            <constraint firstItem="yQr-oB-Ohj" firstAttribute="height" secondItem="V1z-q0-zf1" secondAttribute="height" multiplier="0.8" id="b0H-Wy-Z1t"/>
+                            <constraint firstItem="YwE-23-D2e" firstAttribute="centerX" secondItem="V1z-q0-zf1" secondAttribute="centerX" id="j9c-Mo-gqe"/>
+                            <constraint firstItem="yQr-oB-Ohj" firstAttribute="top" secondItem="V1z-q0-zf1" secondAttribute="top" id="p4h-km-hZN"/>
+                            <constraint firstAttribute="trailing" secondItem="yQr-oB-Ohj" secondAttribute="trailing" id="qQq-0O-F6k"/>
+                            <constraint firstItem="yQr-oB-Ohj" firstAttribute="leading" secondItem="V1z-q0-zf1" secondAttribute="leading" id="yJb-fc-LXr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkL-Z4-AbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="-72"/>
+        </scene>
+        <!--Sport Map View Controller-->
+        <scene sceneID="slT-V7-F26">
+            <objects>
+                <viewController id="quV-fd-VQs" customClass="SGSportMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QyO-fI-i7I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="534"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgA-1G-FaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="-210"/>
+        </scene>
+    </scenes>
+</document>

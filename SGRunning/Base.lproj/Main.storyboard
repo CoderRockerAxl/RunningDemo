@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Running Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SGRunningMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jz-Sp-cs6">
+                                <state key="normal" title="跑步"/>
+                                <connections>
+                                    <action selector="startRunning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3jB-V1-qW3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caP-8Q-8EB">
+                                <state key="normal" title="走路"/>
+                                <connections>
+                                    <action selector="startRunning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c72-ia-7lA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDX-yQ-SbV">
+                                <state key="normal" title="骑行"/>
+                                <connections>
+                                    <action selector="startRunning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRM-Gv-vn5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fDX-yQ-SbV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="FDD-im-hzE"/>
+                            <constraint firstItem="caP-8Q-8EB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ahP-0p-XW6"/>
+                            <constraint firstItem="fDX-yQ-SbV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kfD-Eu-1GF"/>
+                            <constraint firstItem="1Jz-Sp-cs6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="rIX-DV-wrl"/>
+                            <constraint firstItem="caP-8Q-8EB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="reg-9Z-WTO"/>
+                            <constraint firstItem="1Jz-Sp-cs6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yOE-qA-PaD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
